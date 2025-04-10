@@ -2,7 +2,7 @@
 # 机场订阅
 proxy-providers:
   LiuLiangGuang:
-    url: "https://rgergergergerg6555.saojc.xyz/api/v1/client/subscribe?token=8422511918adfe8de0733bf79ed8506d"
+    url: "填入有效的机场订阅"
     type: http
     interval: 86400
     health-check:
