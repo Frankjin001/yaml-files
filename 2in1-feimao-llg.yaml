@@ -2,7 +2,7 @@
 # 机场订阅
 proxy-providers:
   Feimao:
-    url: "https://fcsblka.fcsubcn.cc:2096/api/v1/client/subscribe?token=3a2699e8db8585177f57ad3e89118313"
+    url: "此处为主力机场的订阅链接"
     type: http
     interval: 86400
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
       - "Clash.meta"
 
   LiuLiangGuang:
-    url: "https://rgergergergerg6555.saojc.xyz/api/v1/client/subscribe?token=8422511918adfe8de0733bf79ed8506d"
+    url: "此处为youtube流量机场链接"
     type: http
     interval: 86400
     health-check:
