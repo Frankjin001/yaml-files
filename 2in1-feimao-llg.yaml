@@ -2,7 +2,7 @@
 # 机场订阅
 proxy-providers:
   Feimao:
-    url: "此处为主力机场的订阅链接"
+    url: "https://fcsblka.fcsubcn.cc:2096/api/v1/client/subscribe?token=3a2699e8db8585177f57ad3e89118313"
     type: http
     interval: 86400
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
       - "Clash.meta"
 
   LiuLiangGuang:
-    url: "此处为youtube流量机场链接"
+    url: "https://rgergergergerg6555.saojc.xyz/api/v1/client/subscribe?token=8422511918adfe8de0733bf79ed8506d"
     type: http
     interval: 86400
     health-check:
@@ -134,13 +134,20 @@ dns:
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
 # pr: &pr {type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🇸🇬 狮城故转, 🔯 日本故转, 🇹🇼 台湾故转, ♻️ 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
 pr: &pr {type: select, proxies: [🚀 默认代理,  ♻️ 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+
+llg-pr: &llg-pr {type: select, proxies: [♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🚀 默认代理, 直连]}
+
 proxy-groups:
 #  - {name: 🚀 默认代理, type: select, proxies: [🔯 香港故转, 🇸🇬 狮城故转, 🔯 日本故转, 🇹🇼 台湾故转, ♻️ 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 🚀 默认代理, type: select, proxies: [♻️ 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, ♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🌐 全部节点, 直连]}  
   
+  - {name: 🚀 LLG港台新, <<: *llg-pr}
+
  # - {name: 📹 YouTube, <<: *pr}
-  - {name: 📹 YouTube, type: select, proxies: [♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🚀 默认代理]}
-  
+ # - {name: 📹 YouTube, type: select, proxies: [♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🚀 默认代理]}
+  - {name: 📹 YouTube, <<: *llg-pr} 
+
+
   - {name: 🍀 Google, <<: *pr}
   - {name: 🤖 ChatGPT, <<: *pr}
   - {name: 👨🏿‍💻 GitHub, <<: *pr}
@@ -194,6 +201,7 @@ rules:
   - RULE-SET,tktnlist-frankjin,🎯 tktn
 
   - RULE-SET,bbcuklist-frankjin,🇬🇧 英国自动
+  - RULE-SET,adultlist,🚀 LLG港台新
 
   - RULE-SET,proxylite-frankjin,🚀 默认代理
   - RULE-SET,private_domain,直连
@@ -232,6 +240,7 @@ rule-providers:
   tktnlist-frankjin: { <<: *class, url: "https://raw.githubusercontent.com/Frankjin001/rules/refs/heads/main/tktn.list"}
 
   bbcuklist-frankjin: { <<: *class, url: "https://raw.githubusercontent.com/Frankjin001/rules/refs/heads/main/BBC-UK.list"}
+  adultlist: { <<: *class, url: "https://raw.githubusercontent.com/Frankjin001/rules/refs/heads/main/Adult.list"}
 
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
   proxylite: { <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/ProxyLite.list"} 
