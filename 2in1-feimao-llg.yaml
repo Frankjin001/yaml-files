@@ -161,7 +161,10 @@ proxy-groups:
   - {name: 🍎 Apple, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 🎯 直连, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 🎯 tktn, type: select, proxies: [🚀 默认代理, ♻️ 香港自动, ♻️ 美国自动]}
-  - {name: 🐟 漏网之鱼, <<: *pr}
+
+  #- {name: 🐟 漏网之鱼, <<: *pr}
+  - {name: 🐟 漏网之鱼, <<: *llg-pr}
+
   - {name: 🇭🇰 香港节点, type: select, use: [Feimao], filter: "(?i)港|hk|hongkong|hong kong"}
   - {name: 🇹🇼 台湾节点, type: select, use: [Feimao], filter: "(?i)台|tw|taiwan|tai wan"}
   - {name: 🇸🇬 狮城节点, type: select, use: [Feimao], filter: "(?i)新|狮|sg|Singapore"}
