@@ -154,7 +154,9 @@ proxy-groups:
   - {name: 🐬 OneDrive, <<: *pr}
   - {name: 🪟 Microsoft, <<: *pr}
   - {name: 🎵 TikTok, <<: *pr}
-  - {name: 📲 Telegram, <<: *pr}
+  # - {name: 📲 Telegram, <<: *pr}
+  - {name: 📲 Telegram, <<: *llg-pr}
+
   - {name: 🎥 NETFLIX, <<: *pr}
   - {name: ✈️ Speedtest, <<: *pr}
   - {name: 💶 PayPal, <<: *pr}
