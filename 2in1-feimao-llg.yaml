@@ -2,7 +2,7 @@
 # 机场订阅
 proxy-providers:
   Feimao:
-    url: "这里输入主力机场肥猫的订阅地址"
+    url: "此处添加机场订阅"
     type: http
     interval: 86400
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
       - "Clash.meta"
 
   LiuLiangGuang:
-    url: "这里输入备用机场流量光的订阅地址"
+    url: "此处添加机场订阅"
     type: http
     interval: 86400
     health-check:
@@ -133,9 +133,10 @@ dns:
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
 # pr: &pr {type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🇸🇬 狮城故转, 🔯 日本故转, 🇹🇼 台湾故转, ♻️ 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-pr: &pr {type: select, proxies: [🚀 默认代理,  ♻️ 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+pr: &pr {type: select, proxies: [🚀 默认代理,  ♻️ 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, ♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🌐 全部节点, 直连]}
 
-llg-pr: &llg-pr {type: select, proxies: [♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🚀 默认代理, 直连]}
+# llg-pr: &llg-pr {type: select, proxies: [♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🚀 默认代理, 直连]}
+llg-pr: &llg-pr {type: select, proxies: [♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动]}
 
 proxy-groups:
 #  - {name: 🚀 默认代理, type: select, proxies: [🔯 香港故转, 🇸🇬 狮城故转, 🔯 日本故转, 🇹🇼 台湾故转, ♻️ 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
@@ -143,9 +144,9 @@ proxy-groups:
   
   - {name: 🚀 LLG港台新, <<: *llg-pr}
 
- # - {name: 📹 YouTube, <<: *pr}
+  - {name: 📹 YouTube, <<: *pr}
  # - {name: 📹 YouTube, type: select, proxies: [♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🚀 默认代理]}
-  - {name: 📹 YouTube, <<: *llg-pr} 
+ # - {name: 📹 YouTube, <<: *llg-pr} 
 
 
   - {name: 🍀 Google, <<: *pr}
@@ -154,8 +155,8 @@ proxy-groups:
   - {name: 🐬 OneDrive, <<: *pr}
   - {name: 🪟 Microsoft, <<: *pr}
   - {name: 🎵 TikTok, <<: *pr}
-  # - {name: 📲 Telegram, <<: *pr}
-  - {name: 📲 Telegram, <<: *llg-pr}
+  - {name: 📲 Telegram, <<: *pr}
+ # - {name: 📲 Telegram, <<: *llg-pr}
 
   - {name: 🎥 NETFLIX, <<: *pr}
   - {name: ✈️ Speedtest, <<: *pr}
@@ -163,9 +164,11 @@ proxy-groups:
   - {name: 🍎 Apple, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 🎯 直连, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 🎯 tktn, type: select, proxies: [🚀 默认代理, ♻️ 香港自动, ♻️ 美国自动]}
+  
+ # - {name: 🎯 BBC, type: select, proxies: [🚀 默认代理, 🇬🇧 英国自动]}
 
-  #- {name: 🐟 漏网之鱼, <<: *pr}
-  - {name: 🐟 漏网之鱼, <<: *llg-pr}
+  - {name: 🐟 漏网之鱼, <<: *pr}
+ # - {name: 🐟 漏网之鱼, <<: *llg-pr}
 
   - {name: 🇭🇰 香港节点, type: select, use: [Feimao], filter: "(?i)港|hk|hongkong|hong kong"}
   - {name: 🇹🇼 台湾节点, type: select, use: [Feimao], filter: "(?i)台|tw|taiwan|tai wan"}
@@ -193,9 +196,13 @@ proxy-groups:
   - {name: 🇸🇬 LLG狮城自动, type: url-test, use: [LiuLiangGuang], tolerance: 20, interval: 300, filter: "(?=.*(新|狮|SG|(?i)Singapore))^((?!(港|日|韩|台|深|美)).)*$"}
 
   
+# 此处将列出两个机场所有的节点
+# - {name: ♻️ 自动选择, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
+# - {name: 🌐 全部节点, type: select, use: [Feimao]}
+  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
+  - {name: 🌐 全部节点, type: select, include-all: true}
 
-  - {name: ♻️ 自动选择, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
-  - {name: 🌐 全部节点, type: select, use: [Feimao]}
+
 
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
@@ -205,8 +212,13 @@ rules:
   - RULE-SET,directlist-frankjin,直连
   - RULE-SET,tktnlist-frankjin,🎯 tktn
 
-  - RULE-SET,bbcuklist-frankjin,🇬🇧 英国自动
-  - RULE-SET,adultlist,🚀 LLG港台新
+  #- RULE-SET,bbcuklist-frankjin,🇬🇧 英国自动
+  #- RULE-SET,bbcuklist-frankjin,🚀 默认代理
+  #- RULE-SET,bbcuklist-frankjin,🎯 BBC
+  #- RULE-SET,2minutes-bbc-frankjin,🎯 BBC
+
+  # - RULE-SET,adultlist,🚀 LLG港台新
+  - RULE-SET,adultlist,🚀 默认代理
 
   - RULE-SET,proxylite-frankjin,🚀 默认代理
   - RULE-SET,private_domain,直连
@@ -243,7 +255,10 @@ rule-providers:
   directlist-frankjin: { <<: *class, url: "https://raw.githubusercontent.com/Frankjin001/rules/refs/heads/main/Direct-fatcat.list"}
   tktnlist-frankjin: { <<: *class, url: "https://raw.githubusercontent.com/Frankjin001/rules/refs/heads/main/tktn.list"}
 
-  bbcuklist-frankjin: { <<: *class, url: "https://raw.githubusercontent.com/Frankjin001/rules/refs/heads/main/BBC-UK.list"}
+
+  # 2minutes-bbc-frankjin: { <<: *class, url: "https://raw.githubusercontent.com/Frankjin001/rules/refs/heads/main/2minutes-bbc.list"}
+  # bbcuklist-frankjin: { <<: *class, url: "https://raw.githubusercontent.com/Frankjin001/rules/refs/heads/main/BBC-UK.list"}
+  
   adultlist: { <<: *class, url: "https://raw.githubusercontent.com/Frankjin001/rules/refs/heads/main/Adult.list"}
 
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
