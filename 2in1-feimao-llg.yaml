@@ -3,6 +3,7 @@
 proxy-providers:
   Feimao:
     url: "此处添加机场订阅"
+    url: ##add the proxy please"
     type: http
     interval: 86400
     health-check:
@@ -18,6 +19,7 @@ proxy-providers:
 
   LiuLiangGuang:
     url: "此处添加机场订阅"
+    url: "add the proxy subscription please"
     type: http
     interval: 86400
     health-check:
