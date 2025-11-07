@@ -2,7 +2,7 @@
 # 机场订阅
 proxy-providers:
   Feimao:
-    url: "Copy the Airport subscription here"
+    url: "此处填写机场订阅链接"
     type: http
     interval: 86400
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
       - "Clash.meta"
 
   LiuLiangGuang:
-    url: "Copy the Airport subscription here"
+    url: "此处填写机场订阅链接"
     type: http
     interval: 86400
     health-check:
@@ -36,13 +36,13 @@ proxies:
   - {name: 直连, type: direct, udp: true}
 
 # 下面的VLESS节点来自ClawCloud的proxies-7tech POD，创建于20250902，可能会死掉，可以重启POD。重启之后，理论上这里不需要修改任何东西，应该自动连通。
-  - { name: "cf_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, uuid: <Input the UUID here>, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port: 2053, uuid: <Input the UUID here>, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, uuid: <Input the UUID here>, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, uuid: <Input the UUID here>, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, uuid: <Input the UUID here>, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, uuid: <Input the UUID here>, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_icook_tw_443", type: vless, server: icook.tw, port: 443, uuid: <Input the UUID here>, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, 此处填写UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port: 2053, 此处填写UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, 此处填写UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, 此处填写UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, 此处填写UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, 此处填写UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_icook_tw_443", type: vless, server: icook.tw, port: 443, 此处填写UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
 
 
 # 全局配置 
@@ -208,6 +208,7 @@ proxy-groups:
   - {name: 🎯 tktn, type: select, proxies: [🚀 默认代理, ♻️ 香港自动, ♻️ LLG香港自动, ♻️ 美国自动]}
   
   - {name: 🎯 BBC, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🇬🇧 英国自动, ♻️ 美国自动, ♻️ LLG香港自动, 🇹🇼 LLG台湾自动]}
+  - {name: 🎵 Spotify, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, ♻️ LLG香港自动,♻️ 香港自动]}
 
   - {name: 🐟 漏网之鱼, <<: *pr}
  # - {name: 🐟 漏网之鱼, <<: *llg-pr}
@@ -269,10 +270,17 @@ rules:
 
 # 此规则针对IPTV直播源Gather-json，订阅地址和收看地址一致
   - DOMAIN-KEYWORD,iill,🎯 香港固定
-#  - DOMAIN-KEYWORD,iill,直连
+
 # 此规则针对simplex，避免节点自动跳跃引起连接中断
   - DOMAIN-SUFFIX,simplex.im,🎯 香港固定
+
+# 此规定针对pairdrop，如果被代理似乎无法找到局域网内其他节点，必须走直连
   - DOMAIN-SUFFIX,pairdrop.net,直连
+
+# 此规定将Spotify流量转入ClawCloud，20251107测试通过，也可以唤醒Echo Dot
+  - DOMAIN-SUFFIX,spotify.com,🎵 Spotify
+  - DOMAIN-SUFFIX,spotifycdn.com,🎵 Spotify
+  - DOMAIN-SUFFIX,tospotify.com,🎵 Spotify
 
 # disable all my own rules to test, 20250816 
   - RULE-SET,rejectlist-frankjin,REJECT
