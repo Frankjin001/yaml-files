@@ -2,7 +2,7 @@
 # 机场订阅
 proxy-providers:
   Feimao:
-    url: "you own airport subscription here"
+    url: "Input Subscription1"
     type: http
     interval: 86400
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
       - "Clash.meta"
 
   LiuLiangGuang:
-    url: "your own subscription here"
+    url: "Input Subscription2"
     type: http
     interval: 86400
     health-check:
@@ -36,13 +36,13 @@ proxies:
   - {name: 直连, type: direct, udp: true}
 
 # 下面的VLESS节点来自ClawCloud的proxies-7tech POD，创建于20250902，可能会死掉，可以重启POD。重启之后，理论上这里不需要修改任何东西，应该自动连通。
-  - { name: "cf_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, uuid: YOUR UUID HERE, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/YOUR UUID HERE?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port: 2053, uuid: YOUR UUID HERE, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/YOUR UUID HERE?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, uuid: YOUR UUID HERE, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/YOUR UUID HERE?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, uuid: YOUR UUID HERE, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/YOUR UUID HERE?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, uuid: YOUR UUID HERE, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/YOUR UUID HERE?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, uuid: YOUR UUID HERE, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/YOUR UUID HERE?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_icook_tw_443", type: vless, server: icook.tw, port: 443, uuid: YOUR UUID HERE, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/YOUR UUID HERE?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, uuid: Input UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/Input UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port: 2053, uuid: Input UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/Input UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, uuid: Input UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/Input UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, uuid: Input UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/Input UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, uuid: Input UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/Input UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, uuid: Input UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/Input UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_icook_tw_443", type: vless, server: icook.tw, port: 443, uuid: Input UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/Input UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
 
 
 # 全局配置 
@@ -133,9 +133,6 @@ dns:
     - "+.ntp1.aliyun.com"
     - "+.ntp.ntsc.ac.cn"
     - "+.cn.ntp.org.cn"
-    - "+.fcsubcn.pro"         ###将肥猫订阅的服务器设为redirect 方式，因为服务器在国内
-    - "+.fcsubcn.cc"          ###将肥猫订阅的服务器设为redirect 方式，因为服务器在国内
-    - "+.saojc.xyz"           ###将流量光订阅的服务器设为redirect 方式，因为服务器在国内
   
   # 用于解析 nameserver，fallback 以及其他 DNS 服务器配置的，DNS 服务域名
   # 只能使用纯 IP 地址，可使用加密 DNS
@@ -144,6 +141,8 @@ dns:
     - 114.114.114.114
   
   # 专用于节点域名解析的 DNS 服务器，非必要配置项，如果不填则遵循nameserver-policy、nameserver和fallback的配置
+  # 这里保证了机场订阅中的域名会被国内DNS服务器解析。订阅服务器通常位于国内，下发机场代理节点信息，代理节点位于国外。
+  # 有的机场，订阅服务器国内外都有，如果被国外的DNS服务器解析，有肯能返回一个国外的订阅服务器，这样有可能不能连接，或者拿不到正确的代理节点信息。
   proxy-server-nameserver:
     - 223.5.5.5
     - 114.114.114.114
@@ -151,27 +150,17 @@ dns:
  
   # 配置查询域名使用的 DNS 服务器，主力DNS服务。
   nameserver-policy:
-    "*.fcsubcn.pro":        ### 肥猫的服务器指定走国内域名解析，否则会被视为国外域名，被国外的DNS服务器解析后是国外的proxy服务器的IP，这样无法更新订阅
-      - 223.5.5.5
-      - 114.114.114.114
-    "*.fcsubcn.cc":         ### 肥猫的服务器指定走国内域名解析，否则会被视为国外域名，被国外的DNS服务器解析后是国外的proxy服务器的IP，这样无法更新订阅
-      - 223.5.5.5
-      - 114.114.114.114
-    "*.saojc.xyz":          ### 流量光的服务器指定走国内域名解析
-      - 223.5.5.5
-      - 114.114.114.114
     "rule-set:cn_domain":
       -         # 你的 ISP DNS
       - 
-    "rule-set:geolocation-!cn":
+    "rule-set:geolocation-!cn":     # 国外的域名查询国外的DNS服务器，用IP比域名好，否则还要查询default-nameserver来解析这里的域名
       - https://1.1.1.1/dns-query
-      - https://dns.google/dns-query
+      - https://8.8.8.8/dns-query
 
 
   # namesever尽量用运营商提供的DNS
+  # 只有当上面定义的DNS服务器都失败的时候，才会使用。
   nameserver:
-#    - https://1.1.1.1/dns-query
-#    - https://8.8.8.8/dns-query
       -         # 你的 ISP DNS
       - 
 
@@ -281,8 +270,6 @@ rules:
 
 # 此规则针对simplex，避免节点自动跳跃引起连接中断
   - DOMAIN-SUFFIX,simplex.im,🎯 香港固定
-# 此规定针对pairdrop，如果被代理似乎无法找到局域网内其他节点，必须走直连
-##  - DOMAIN-SUFFIX,pairdrop.net,直连
 
   - RULE-SET,rejectlist-frankjin,REJECT
   - RULE-SET,directlist-frankjin,直连
