@@ -2,7 +2,7 @@
 # 机场订阅
 proxy-providers:
   Feimao:
-    url: "Input Subscription1"
+    url: "输入机场订阅1"
     type: http
     interval: 86400
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
       - "Clash.meta"
 
   LiuLiangGuang:
-    url: "Input Subscription2"
+    url: "输入机场订阅2"
     type: http
     interval: 86400
     health-check:
