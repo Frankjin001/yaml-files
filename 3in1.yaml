@@ -197,7 +197,6 @@ proxy-groups:
  # - {name: 📹 YouTube, <<: *pr, 🚇 ClawCloud隧道}
  # - {name: 📹 YouTube, type: select, proxies: [♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🚀 默认代理]}
  
-
   - {name: 🚇 ClawCloud隧道, type: select, proxies: [cf_tunnel_visa_tw_443, cf_tunnel_visa_hk_2053, cf_tunnel_visa_br_8443, cf_tunnel_visa_ch_443, cf_tunnel_visa_us_2053, cf_tunnel_icook_hk_8443, cf_tunnel_icook_tw_443]}
 
   - {name: 🍀 Google, <<: *pr}
@@ -279,7 +278,7 @@ rules:
   - RULE-SET,adultlist-frankjin,🚀 默认代理
 
 # disable all my own rules, 20250816 
-#  - RULE-SET,proxylite-frankjin,🚀 默认代理
+# - RULE-SET,proxylite-frankjin,🚀 默认代理
 
   - RULE-SET,private_domain,直连
   - RULE-SET,apple_domain,🍎 Apple
