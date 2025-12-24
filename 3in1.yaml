@@ -2,7 +2,7 @@
 # 机场订阅
 proxy-providers:
   Feimao:
-    url: "输入机场订阅1"
+    url: "输入订阅地址1"
     type: http
     interval: 86400
     health-check:
@@ -17,7 +17,7 @@ proxy-providers:
       - "Clash.meta"
 
   LiuLiangGuang:
-    url: "输入机场订阅2"
+    url: "输入订阅地址2"
     type: http
     interval: 86400
     health-check:
@@ -36,13 +36,13 @@ proxies:
   - {name: 直连, type: direct, udp: true}
 
 # 下面的VLESS节点来自ClawCloud的proxies-7tech POD，创建于20250902，可能会死掉，可以重启POD。重启之后，理论上这里不需要修改任何东西，应该自动连通。
-  - { name: "cf_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, uuid: Input UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/Input UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port: 2053, uuid: Input UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/Input UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, uuid: Input UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/Input UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, uuid: Input UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/Input UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, uuid: Input UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/Input UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, uuid: Input UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/Input UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_icook_tw_443", type: vless, server: icook.tw, port: 443, uuid: Input UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/Input UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, uuid: 输入自定义UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/输入自定义UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port: 2053, uuid: 输入自定义UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/输入自定义UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, uuid: 输入自定义UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/输入自定义UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, uuid: 输入自定义UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/输入自定义UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, uuid: 输入自定义UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/输入自定义UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, uuid: 输入自定义UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/输入自定义UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_icook_tw_443", type: vless, server: icook.tw, port: 443, uuid: 输入自定义UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/输入自定义UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
 
 
 # 全局配置 
@@ -140,7 +140,7 @@ dns:
     - 223.5.5.5
     - 114.114.114.114
   
-  # 专用于节点域名解析的 DNS 服务器，非必要配置项，如果不填则遵循nameserver-policy、nameserver和fallback的配置
+  # 专用于节点域名解析的DNS服务器，非必要配置项，如果不填则遵循nameserver-policy、nameserver和fallback的配置
   # 这里保证了机场订阅中的域名会被国内DNS服务器解析。订阅服务器通常位于国内，下发机场代理节点信息，代理节点位于国外。
   # 有的机场，订阅服务器国内外都有，如果被国外的DNS服务器解析，有肯能返回一个国外的订阅服务器，这样有可能不能连接，或者拿不到正确的代理节点信息。
   proxy-server-nameserver:
@@ -179,26 +179,19 @@ dns:
 
  
 # 出站策略
-# 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
-# pr: &pr {type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🇸🇬 狮城故转, 🔯 日本故转, 🇹🇼 台湾故转, ♻️ 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-pr: &pr {type: select, proxies: [🚀 默认代理, ♻️ 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, ♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🇺🇲 LLG美国节点, 🚇 ClawCloud隧道, 🌐 全部节点, 直连]}
+# 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部.
+
+pr: &pr {type: select, proxies: [🚀 默认代理, ♻️ 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, ♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🇯🇵 LLG日本自动, 🇺🇲 LLG美国自动, 🇺🇲 LLG美国节点, 🚇 ClawCloud隧道, 🌐 全部节点, 直连]}
 
 # llg-pr: &llg-pr {type: select, proxies: [♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🚀 默认代理, 直连]}
 # llg-pr: &llg-pr {type: select, proxies: [♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动]}
 
 proxy-groups:
-#  - {name: 🚀 默认代理, type: select, proxies: [🔯 香港故转, 🇸🇬 狮城故转, 🔯 日本故转, 🇹🇼 台湾故转, ♻️ 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 🚀 默认代理, type: select, proxies: [♻️ 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, ♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🇺🇲 LLG美国节点, 🚇 ClawCloud隧道, 🌐 全部节点, 直连]}  
-  
- # - {name: 🚀 LLG港台新, <<: *llg-pr}
 
+  - {name: 🚀 默认代理, type: select, proxies: [♻️ 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, ♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🇯🇵 LLG日本自动, 🇺🇲 LLG美国自动, 🇺🇲 LLG美国节点, 🚇 ClawCloud隧道, 🌐 全部节点, 直连]}  
   - {name: 🎯 香港固定, type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 LLG香港故转]}
-  - {name: 📹 YouTube, <<: *pr}
- # - {name: 📹 YouTube, <<: *pr, 🚇 ClawCloud隧道}
- # - {name: 📹 YouTube, type: select, proxies: [♻️ LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🚀 默认代理]}
- 
   - {name: 🚇 ClawCloud隧道, type: select, proxies: [cf_tunnel_visa_tw_443, cf_tunnel_visa_hk_2053, cf_tunnel_visa_br_8443, cf_tunnel_visa_ch_443, cf_tunnel_visa_us_2053, cf_tunnel_icook_hk_8443, cf_tunnel_icook_tw_443]}
-
+  - {name: 📹 YouTube, <<: *pr}
   - {name: 🍀 Google, <<: *pr}
   - {name: 🤖 ChatGPT, <<: *pr}
   - {name: 👨🏿‍💻 GitHub, <<: *pr}
@@ -212,15 +205,12 @@ proxy-groups:
   - {name: 🍎 Apple, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 🎯 直连, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 🎯 tktn, type: select, proxies: [🚀 默认代理, ♻️ 香港自动, ♻️ LLG香港自动, ♻️ 美国自动]}
-  
   - {name: 🎯 BBC, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🇬🇧 英国自动, ♻️ 美国自动, ♻️ LLG香港自动, 🇹🇼 LLG台湾自动]}
   - {name: 🎵 Spotify, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, ♻️ LLG香港自动,♻️ 香港自动]}
-
   - {name: 🐟 漏网之鱼, <<: *pr}
 
   - {name: 🇭🇰 香港节点, type: select, use: [Feimao], filter: "(?i)港|hk|hongkong|hong kong"}
   - {name: 🇹🇼 台湾节点, type: select, use: [Feimao], filter: "(?i)台|tw|taiwan|tai wan"}
- # - {name: 🇸🇬 狮城节点, type: select, use: [Feimao], filter: "(?i)新|狮|sg|Singapore"}
   - {name: 🇸🇬 狮城节点, type: select, use: [Feimao], filter: "(?i)坡|狮|sg|Singapore"}
   - {name: 🇯🇵 日本节点, type: select, use: [Feimao], filter: "(?i)Cl日|jp|japan"}
   - {name: 🇺🇲 美国节点, type: select, use: [Feimao], filter: "(?i)美|us|unitedstates|united states"}
@@ -228,17 +218,13 @@ proxy-groups:
 
 # enable 香港故转 for IPTV gather, expecting to use a proxy server and stick to it as long as it is available. 
   - {name: 🔯 香港故转, type: fallback, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
-
-
 #  - {name: 🇹🇼 台湾故转, type: fallback, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(台|TW|(?i)Tai))^((?!(港|日|韩|新|深|美)).)*$"}
 #  - {name: 🇸🇬 狮城故转, type: fallback, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(新|狮|SG|(?i)Singapore))^((?!(港|日|韩|台|深|美)).)*$"}
 #  - {name: 🔯 日本故转, type: fallback, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
 
   - {name: ♻️ 香港自动, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: 🇹🇼 台湾自动, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(台|TW|(?i)Tai))^((?!(港|日|韩|新|深|美)).)*$"}
-# - {name: 🇸🇬 狮城自动, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(新|狮|SG|(?i)Singapore))^((?!(港|日|韩|台|深|美)).)*$"} 
   - {name: 🇸🇬 狮城自动, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(坡|狮|SG|(?i)Singapore))^((?!(港|日|韩|台|深|美)).)*$"} 
-
   - {name: ♻️ 日本自动, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
   - {name: ♻️ 美国自动, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
 #  - {name: 🇬🇧 英国自动, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(英|UK|(?i)unitedkingdom|united kingdom))^((?!(港|台|日|韩|新|美)).)*$"}
@@ -249,6 +235,8 @@ proxy-groups:
   - {name: ♻️ LLG香港自动, type: url-test, use: [LiuLiangGuang], tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: 🇹🇼 LLG台湾自动, type: url-test, use: [LiuLiangGuang], tolerance: 20, interval: 300, filter: "(?=.*(台|TW|(?i)Tai))^((?!(港|日|韩|新|深|美)).)*$"}
   - {name: 🇸🇬 LLG狮城自动, type: url-test, use: [LiuLiangGuang], tolerance: 20, interval: 300, filter: "(?=.*(新|狮|SG|(?i)Singapore))^((?!(港|日|韩|台|深|美)).)*$"}
+  - {name: 🇯🇵 LLG日本自动, type: url-test, use: [LiuLiangGuang], tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
+  - {name: 🇺🇲 LLG美国自动, type: url-test, use: [LiuLiangGuang], tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
   - {name: 🔯 LLG香港故转, type: fallback, use: [LiuLiangGuang], tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: 🇺🇲 LLG美国节点, type: select, use: [LiuLiangGuang], filter: "(?i)美|us|unitedstates|United States"}
   
@@ -278,7 +266,7 @@ rules:
   - RULE-SET,adultlist-frankjin,🚀 默认代理
 
 # disable all my own rules, 20250816 
-# - RULE-SET,proxylite-frankjin,🚀 默认代理
+#  - RULE-SET,proxylite-frankjin,🚀 默认代理
 
   - RULE-SET,private_domain,直连
   - RULE-SET,apple_domain,🍎 Apple
