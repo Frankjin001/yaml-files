@@ -143,7 +143,7 @@ dns:
     # - https://dns.google/dns-query    # Google DNS
 
   
-  # 配置查询域名使用的 DNS 服务器
+  # 配置查询域名使用的 DNS 服务器, test
   #nameserver-policy:
   #  "rule-set:private_domain,cn_domain":
   #    - 223.5.5.5
