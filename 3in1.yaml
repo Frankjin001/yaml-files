@@ -36,13 +36,22 @@ proxies:
   - {name: 直连, type: direct, udp: true}
 
 # 下面的VLESS节点来自ClawCloud的proxies-7tech POD，创建于20250902，可能会死掉，可以重启POD。重启之后，理论上这里不需要修改任何东西，应该自动连通。
-  - { name: "cf_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, uuid: 请输入UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/请输入UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port: 2053, uuid: 请输入UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/请输入UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, uuid: 请输入UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/请输入UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, uuid: 请输入UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/请输入UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, uuid: 请输入UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/请输入UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, uuid: 请输入UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/请输入UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_icook_tw_443", type: vless, server: icook.tw, port: 443, uuid: 请输入UUID, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/请输入UUID?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, uuid: f1617bb3-14fc-4d91-ab81-65b718a3e3c4, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port: 2053, uuid: f1617bb3-14fc-4d91-ab81-65b718a3e3c4, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, uuid: f1617bb3-14fc-4d91-ab81-65b718a3e3c4, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, uuid: f1617bb3-14fc-4d91-ab81-65b718a3e3c4, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, uuid: f1617bb3-14fc-4d91-ab81-65b718a3e3c4, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, uuid: f1617bb3-14fc-4d91-ab81-65b718a3e3c4, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_icook_tw_443", type: vless, server: icook.tw, port: 443, uuid: f1617bb3-14fc-4d91-ab81-65b718a3e3c4, udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/f1617bb3-14fc-4d91-ab81-65b718a3e3c4?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+
+# 下面的VLESS节点来自ClawCloud的US West zone, 创建于20260318
+  - { name: "US_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, uuid: 201f5b4e-8f8f-4c4a-bafe-67da8fa45db1, udp: true, tls: true, network: ws, sni: us-clawcloud.myworldmyway.top, host: us-clawcloud.myworldmyway.top, ws-opts: { path: "/201f5b4e-8f8f-4c4a-bafe-67da8fa45db1?ed=2048", headers: { Host: us-clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "US_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port: 2053, uuid: 201f5b4e-8f8f-4c4a-bafe-67da8fa45db1, udp: true, tls: true, network: ws, sni: us-clawcloud.myworldmyway.top, host: us-clawcloud.myworldmyway.top, ws-opts: { path: "/201f5b4e-8f8f-4c4a-bafe-67da8fa45db1?ed=2048", headers: { Host: us-clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "US_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, uuid: 201f5b4e-8f8f-4c4a-bafe-67da8fa45db1, udp: true, tls: true, network: ws, sni: us-clawcloud.myworldmyway.top, host: us-clawcloud.myworldmyway.top, ws-opts: { path: "/201f5b4e-8f8f-4c4a-bafe-67da8fa45db1?ed=2048", headers: { Host: us-clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "US_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, uuid: 201f5b4e-8f8f-4c4a-bafe-67da8fa45db1, udp: true, tls: true, network: ws, sni: us-clawcloud.myworldmyway.top, host: us-clawcloud.myworldmyway.top, ws-opts: { path: "/201f5b4e-8f8f-4c4a-bafe-67da8fa45db1?ed=2048", headers: { Host: us-clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "US_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, uuid: 201f5b4e-8f8f-4c4a-bafe-67da8fa45db1, udp: true, tls: true, network: ws, sni: us-clawcloud.myworldmyway.top, host: us-clawcloud.myworldmyway.top, ws-opts: { path: "/201f5b4e-8f8f-4c4a-bafe-67da8fa45db1?ed=2048", headers: { Host: us-clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "US_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, uuid: 201f5b4e-8f8f-4c4a-bafe-67da8fa45db1, udp: true, tls: true, network: ws, sni: us-clawcloud.myworldmyway.top, host: us-clawcloud.myworldmyway.top, ws-opts: { path: "/201f5b4e-8f8f-4c4a-bafe-67da8fa45db1?ed=2048", headers: { Host: us-clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "US_tunnel_icook_tw_443", type: vless, server: icook.tw, port: 443, uuid: 201f5b4e-8f8f-4c4a-bafe-67da8fa45db1, udp: true, tls: true, network: ws, sni: us-clawcloud.myworldmyway.top, host: us-clawcloud.myworldmyway.top, ws-opts: { path: "/201f5b4e-8f8f-4c4a-bafe-67da8fa45db1?ed=2048", headers: { Host: us-clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
 
 
 # 全局配置 
@@ -181,16 +190,17 @@ dns:
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部.
 
-pr: &pr {type: select, proxies: [🚀 默认代理, 🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🇯🇵 LLG日本自动, 🇺🇲 LLG美国自动, 🇺🇲 LLG美国节点, 🚇 ClawCloud隧道, 🌐 全部节点, 直连]}
+pr: &pr {type: select, proxies: [🚀 默认代理, 🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🇯🇵 LLG日本自动, 🇺🇲 LLG美国自动, 🇺🇲 LLG美国节点, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🌐 全部节点, 直连]}
 
 # llg-pr: &llg-pr {type: select, proxies: [🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🚀 默认代理, 直连]}
 # llg-pr: &llg-pr {type: select, proxies: [🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动]}
 
 proxy-groups:
 
-  - {name: 🚀 默认代理, type: select, proxies: [🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🇯🇵 LLG日本自动, 🇺🇲 LLG美国自动, 🇺🇲 LLG美国节点, 🚇 ClawCloud隧道, 🌐 全部节点, 直连]}  
+  - {name: 🚀 默认代理, type: select, proxies: [🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🇯🇵 LLG日本自动, 🇺🇲 LLG美国自动, 🇺🇲 LLG美国节点, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🌐 全部节点, 直连]}  
   - {name: 🎯 香港固定, type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 LLG香港故转]}
   - {name: 🚇 ClawCloud隧道, type: select, proxies: [cf_tunnel_visa_tw_443, cf_tunnel_visa_hk_2053, cf_tunnel_visa_br_8443, cf_tunnel_visa_ch_443, cf_tunnel_visa_us_2053, cf_tunnel_icook_hk_8443, cf_tunnel_icook_tw_443]}
+  - {name: 🚇 US-CC-隧道, type: select, proxies: [US_tunnel_visa_tw_443, US_tunnel_visa_hk_2053, US_tunnel_visa_br_8443, US_tunnel_visa_ch_443, US_tunnel_visa_us_2053, US_tunnel_icook_hk_8443, US_tunnel_icook_tw_443]}
   - {name: 📹 YouTube, <<: *pr}
   - {name: 🍀 Google, <<: *pr}
   - {name: 🤖 AI, <<: *pr}
@@ -205,8 +215,8 @@ proxy-groups:
   - {name: 🍎 Apple, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 🎯 直连, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 📞 tktn, type: select, proxies: [🚀 默认代理, 🇭🇰 香港自动, 🇭🇰 LLG香港自动, ♻️ 美国自动]}
-  - {name: 📻 BBC, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🇬🇧 英国自动, ♻️ 美国自动, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动]}
-  - {name: 🎵 Spotify, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🇭🇰 LLG香港自动,🇭🇰 香港自动]}
+  - {name: 📻 BBC, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🇬🇧 英国自动, ♻️ 美国自动, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动]}
+  - {name: 🎵 Spotify, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🇭🇰 LLG香港自动,🇭🇰 香港自动]}
   - {name: 🐟 漏网之鱼, <<: *pr}
 
   - {name: 🇭🇰 香港节点, type: select, use: [Feimao], filter: "(?i)港|hk|hongkong|hong kong"}
@@ -256,7 +266,7 @@ rules:
   - DOMAIN-KEYWORD,iill,🎯 香港固定
 
 # 此规则针对simplex，避免节点自动跳跃引起连接中断
-  - DOMAIN-SUFFIX,simplex.im,🎯 香港固定
+#  - DOMAIN-SUFFIX,simplex.im,🎯 香港固定
 
   - RULE-SET,rejectlist-frankjin,REJECT
   - RULE-SET,directlist-frankjin,直连
