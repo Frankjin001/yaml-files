@@ -1,7 +1,7 @@
 # 注意规则在满足自己需求情况下，尽量做到精简，不要过度复杂，以免影响性能。
 # 机场订阅
 proxy-providers:
-  Feimao:
+  FlowerCloud:
     url: "输入机场订阅1"
     type: http
     interval: 86400
@@ -27,9 +27,11 @@ proxy-providers:
     proxy: 直连
     header:
       User-Agent:
-      - "Clash"
-      - "mihomo"
-      - "Clash.meta"
+      - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 SE 2.8 MetaSr 1.0"
+
+
+
+
 
 # 节点信息
 proxies:
@@ -177,7 +179,7 @@ dns:
     - https://1.0.0.1/dns-query
     - https://8.8.4.4/dns-query
 
-# add this as a test
+
 # Summary of priority
 # nameserver-policy → rule-matched domains
 # nameserver → unmatched domains
@@ -219,26 +221,26 @@ proxy-groups:
   - {name: 🎵 Spotify, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🇭🇰 LLG香港自动,🇭🇰 香港自动]}
   - {name: 🐟 漏网之鱼, <<: *pr}
 
-  - {name: 🇭🇰 香港节点, type: select, use: [Feimao], filter: "(?i)港|hk|hongkong|hong kong"}
-  - {name: 🇹🇼 台湾节点, type: select, use: [Feimao], filter: "(?i)台|tw|taiwan|tai wan"}
-  - {name: 🇸🇬 狮城节点, type: select, use: [Feimao], filter: "(?i)坡|狮|sg|Singapore"}
-  - {name: 🇯🇵 日本节点, type: select, use: [Feimao], filter: "(?i)Cl日|jp|japan"}
-  - {name: 🇺🇲 美国节点, type: select, use: [Feimao], filter: "(?i)美|us|unitedstates|united states"}
-#  - {name: 🇬🇧 英国节点, type: select, use: [Feimao], filter: "(?i)英|uk|unitedkingdom|united kingdom"}
+  - {name: 🇭🇰 香港节点, type: select, use: [FlowerCloud], filter: "(?i)港|hk|hongkong|hong kong"}
+  - {name: 🇹🇼 台湾节点, type: select, use: [FlowerCloud], filter: "(?i)台|tw|taiwan|tai wan"}
+  - {name: 🇸🇬 狮城节点, type: select, use: [FlowerCloud], filter: "(?i)坡|狮|sg|Singapore"}
+  - {name: 🇯🇵 日本节点, type: select, use: [FlowerCloud], filter: "(?i)日|jp|japan"}
+  - {name: 🇺🇲 美国节点, type: select, use: [FlowerCloud], filter: "(?i)美|us|unitedstates|united states"}
+#  - {name: 🇬🇧 英国节点, type: select, use: [FlowerCloud], filter: "(?i)英|uk|unitedkingdom|united kingdom"}
 
 # enable 香港故转 for IPTV gather, expecting to use a proxy server and stick to it as long as it is available. 
-  - {name: 🔯 香港故转, type: fallback, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
-#  - {name: 🇹🇼 台湾故转, type: fallback, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(台|TW|(?i)Tai))^((?!(港|日|韩|新|深|美)).)*$"}
-#  - {name: 🇸🇬 狮城故转, type: fallback, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(新|狮|SG|(?i)Singapore))^((?!(港|日|韩|台|深|美)).)*$"}
-#  - {name: 🔯 日本故转, type: fallback, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
+  - {name: 🔯 香港故转, type: fallback, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
+#  - {name: 🇹🇼 台湾故转, type: fallback, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(台|TW|(?i)Tai))^((?!(港|日|韩|新|深|美)).)*$"}
+#  - {name: 🇸🇬 狮城故转, type: fallback, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(新|狮|SG|(?i)Singapore))^((?!(港|日|韩|台|深|美)).)*$"}
+#  - {name: 🔯 日本故转, type: fallback, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
 
-  - {name: 🇭🇰 香港自动, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
-  - {name: 🇹🇼 台湾自动, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(台|TW|(?i)Tai))^((?!(港|日|韩|新|深|美)).)*$"}
-  - {name: 🇸🇬 狮城自动, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(坡|狮|SG|(?i)Singapore))^((?!(港|日|韩|台|深|美)).)*$"} 
-  - {name: ♻️ 日本自动, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
-  - {name: ♻️ 美国自动, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
-#  - {name: 🇬🇧 英国自动, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "(?=.*(英|UK|(?i)unitedkingdom|united kingdom))^((?!(港|台|日|韩|新|美)).)*$"}
-  - {name: 🇬🇧 英国自动, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "(?i)^(?!.*(港|台|日|韩|新|美)).*(英|UK|united ?kingdom)"}
+  - {name: 🇭🇰 香港自动, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
+  - {name: 🇹🇼 台湾自动, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(台|TW|(?i)Tai))^((?!(港|日|韩|新|深|美)).)*$"}
+  - {name: 🇸🇬 狮城自动, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(坡|狮|SG|(?i)Singapore))^((?!(港|日|韩|台|深|美)).)*$"} 
+  - {name: ♻️ 日本自动, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
+  - {name: ♻️ 美国自动, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
+#  - {name: 🇬🇧 英国自动, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(英|UK|(?i)unitedkingdom|united kingdom))^((?!(港|台|日|韩|新|美)).)*$"}
+  - {name: 🇬🇧 英国自动, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?i)^(?!.*(港|台|日|韩|新|美)).*(英|UK|united ?kingdom)"}
 
 
 # 此处是LiuLiangGuang机场节点配置
@@ -251,8 +253,8 @@ proxy-groups:
   - {name: 🇺🇲 LLG美国节点, type: select, use: [LiuLiangGuang], filter: "(?i)美|us|unitedstates|United States"}
   
 # 此处将列出两个机场所有的节点
-# - {name: ♻️ 自动选择, type: url-test, use: [Feimao], tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
-# - {name: 🌐 全部节点, type: select, use: [Feimao]}
+# - {name: ♻️ 自动选择, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
+# - {name: 🌐 全部节点, type: select, use: [FlowerCloud]}
   - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
   - {name: 🌐 全部节点, type: select, include-all: true}
 
