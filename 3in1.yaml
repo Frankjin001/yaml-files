@@ -1,4 +1,4 @@
-# 注意规则在满足自己需求情况下，尽量做到精简，不要过度复杂，以免影响性能。
+# 注意规则在满足自己需求情况下,尽量做到精简,不要过度复杂,以免影响性能。
 # 机场订阅
 proxy-providers:
   FlowerCloud:
@@ -37,23 +37,23 @@ proxy-providers:
 proxies:
   - {name: 直连, type: direct, udp: true}
 
-# 下面的VLESS节点来自ClawCloud的proxies-7tech POD，创建于20250902，可能会死掉，可以重启POD。重启之后，理论上这里不需要修改任何东西，应该自动连通。
-  - { name: "cf_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, uuid: , udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port: 2053, uuid: , udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, uuid: , udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, uuid: , udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, uuid: , udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, uuid: , udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_icook_tw_443", type: vless, server: icook.tw, port: 443, uuid: , udp: true, tls: true, network: ws, sni: clawcloud.myworldmyway.top, host: clawcloud.myworldmyway.top, ws-opts: { path: "/?ed=2048", headers: { Host: clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+# 下面的VLESS节点来自ClawCloud的proxies-7tech POD,创建于20250902,可能会死掉,可以重启POD。重启之后,理论上这里不需要修改任何东西,应该自动连通。
+  - { name: "cf_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, uuid: #Input the UUID here#, udp: true, tls: true, network: ws, sni: clawcloud.<Input your private domain here>, host: clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input Japan UUID here#?ed=2048", headers: { Host: clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port: 2053, uuid: #Input the UUID here#, udp: true, tls: true, network: ws, sni: clawcloud.<Input your private domain here>, host: clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input Japan UUID here#?ed=2048", headers: { Host: clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, uuid: #Input the UUID here#, udp: true, tls: true, network: ws, sni: clawcloud.<Input your private domain here>, host: clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input Japan UUID here#?ed=2048", headers: { Host: clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, uuid: #Input the UUID here#, udp: true, tls: true, network: ws, sni: clawcloud.<Input your private domain here>, host: clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input Japan UUID here#?ed=2048", headers: { Host: clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, uuid: #Input the UUID here#, udp: true, tls: true, network: ws, sni: clawcloud.<Input your private domain here>, host: clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input Japan UUID here#?ed=2048", headers: { Host: clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
+  - { name: "cf_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, uuid: #Input the UUID here#, udp: true, tls: true, network: ws, sni: clawcloud.<Input your private domain here>, host: clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input Japan UUID here#?ed=2048", headers: { Host: clawcloud.<Input your private domain here> } }, client-fingerprint:chrome }
+  - { name:"cf_tunnel_icook_tw_443", type:vless, server: icook.tw, port: 443, uuid: #Input the UUID here#, udp: true, tls: true, network: ws, sni: clawcloud.<Input your private domain here>, host: clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input Japan UUID here#?ed=2048", headers: { Host: clawcloud.<Input your private domain here> } }, client-fingerprint:chrome }
 
 # 下面的VLESS节点来自ClawCloud的US West zone, 创建于20260318
-  - { name: "US_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, uuid: , udp: true, tls: true, network: ws, sni: us-clawcloud.myworldmyway.top, host: us-clawcloud.myworldmyway.top, ws-opts: { path: "/?ed=2048", headers: { Host: us-clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "US_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port: 2053, uuid: , udp: true, tls: true, network: ws, sni: us-clawcloud.myworldmyway.top, host: us-clawcloud.myworldmyway.top, ws-opts: { path: "/?ed=2048", headers: { Host: us-clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "US_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, uuid: , udp: true, tls: true, network: ws, sni: us-clawcloud.myworldmyway.top, host: us-clawcloud.myworldmyway.top, ws-opts: { path: "/?ed=2048", headers: { Host: us-clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "US_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, uuid: , udp: true, tls: true, network: ws, sni: us-clawcloud.myworldmyway.top, host: us-clawcloud.myworldmyway.top, ws-opts: { path: "/?ed=2048", headers: { Host: us-clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "US_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, uuid: , udp: true, tls: true, network: ws, sni: us-clawcloud.myworldmyway.top, host: us-clawcloud.myworldmyway.top, ws-opts: { path: "/?ed=2048", headers: { Host: us-clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "US_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, uuid: , udp: true, tls: true, network: ws, sni: us-clawcloud.myworldmyway.top, host: us-clawcloud.myworldmyway.top, ws-opts: { path: "/?ed=2048", headers: { Host: us-clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
-  - { name: "US_tunnel_icook_tw_443", type: vless, server: icook.tw, port: 443, uuid: , udp: true, tls: true, network: ws, sni: us-clawcloud.myworldmyway.top, host: us-clawcloud.myworldmyway.top, ws-opts: { path: "/?ed=2048", headers: { Host: us-clawcloud.myworldmyway.top } }, client-fingerprint: chrome }
+  - { name: "US_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, uuid: #Input the US UUID here#, udp: true, tls: true, network: ws, sni: us-clawcloud.<Input your private domain here>, host: us-clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input US UUID here#?ed=2048", headers: { Host: us-clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
+  - { name: "US_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port:2053, uuid: #Input the US UUID here# ,udp: true, tls: true, network: ws, sni: us-clawcloud.<Input your private domain here>, host: us-clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input US UUID here#?ed=2048", headers: { Host: us-clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
+  - { name: "US_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, uuid: #Input the US UUID here#, udp: true, tls: true, network: ws, sni: us-clawcloud.<Input your private domain here>, host: us-clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input US UUID here#?ed=2048", headers: { Host: us-clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
+  - { name: "US_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, uuid: #Input the US UUID here#, udp: true, tls: true, network: ws, sni: us-clawcloud.<Input your private domain here>, host: us-clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input US UUID here#?ed=2048", headers: { Host: us-clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
+  - { name: "US_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, uuid: #Input the US UUID here#, udp: true, tls: true, network: ws, sni: us-clawcloud.<Input your private domain here>, host: us-clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input US UUID here#?ed=2048", headers: { Host: us-clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
+  - { name: "US_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, uuid: #Input the US UUID here#, udp: true, tls; true, network: ws, sni: us-clawcloud.<Input your private domain here>, host: us-clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input US UUID here#?ed=2048", headers: { Host: us-clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
+  - { name: "US_tunnel_icook_tw_443", type: vless, server: icook.tw, port: 443, uuid: #Input the UUID here#, udp: true, tls: true, network: ws, sni: us-clawcloud.<Input your private domain here>, host: us-clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input US UUID here#?ed=2048", headers: { Host: us-clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
 
 
 # 全局配置 
@@ -145,32 +145,32 @@ dns:
     - "+.ntp.ntsc.ac.cn"
     - "+.cn.ntp.org.cn"
   
-  # 用于解析 nameserver，fallback 以及其他 DNS 服务器配置的，DNS 服务域名
-  # 只能使用纯 IP 地址，可使用加密 DNS
+  # 用于解析 nameserver,fallback 以及其他 DNS 服务器配置的,DNS 服务域名
+  # 只能使用纯 IP 地址,可使用加密 DNS
   default-nameserver:
     - 223.5.5.5
     - 114.114.114.114
   
-  # 专用于节点域名解析的DNS服务器，非必要配置项，如果不填则遵循nameserver-policy、nameserver和fallback的配置
-  # 这里保证了机场订阅中的域名会被国内DNS服务器解析。订阅服务器通常位于国内，下发机场代理节点信息，代理节点位于国外。
-  # 有的机场，订阅服务器国内外都有，如果被国外的DNS服务器解析，有肯能返回一个国外的订阅服务器，这样有可能不能连接，或者拿不到正确的代理节点信息。
+  # 专用于节点域名解析的DNS服务器,非必要配置项,如果不填则遵循nameserver-policy、nameserver和fallback的配置
+  # 这里保证了机场订阅中的域名会被国内DNS服务器解析。订阅服务器通常位于国内,下发机场代理节点信息,代理节点位于国外。
+  # 有的机场,订阅服务器国内外都有,如果被国外的DNS服务器解析,有肯能返回一个国外的订阅服务器,这样有可能不能连接,或者拿不到正确的代理节点信息。
   proxy-server-nameserver:
     - 223.5.5.5
     - 114.114.114.114
     
  
-  # 配置查询域名使用的 DNS 服务器，主力DNS服务。
+  # 配置查询域名使用的 DNS 服务器,主力DNS服务。
   nameserver-policy:
     "rule-set:cn_domain":
       -         # 你的 ISP DNS
       - 
-    "rule-set:geolocation-!cn":     # 国外的域名查询国外的DNS服务器，用IP比域名好，否则还要查询default-nameserver来解析这里的域名
+    "rule-set:geolocation-!cn":     # 国外的域名查询国外的DNS服务器,用IP比域名好,否则还要查询default-nameserver来解析这里的域名
       - https://1.1.1.1/dns-query
       - https://8.8.8.8/dns-query
 
 
   # namesever尽量用运营商提供的DNS
-  # 只有当上面定义的DNS服务器都失败的时候，才会使用。
+  # 只有当上面定义的DNS服务器都失败的时候,才会使用。
   nameserver:
       -         # 你的 ISP DNS
       - 
@@ -183,14 +183,14 @@ dns:
 # Summary of priority
 # nameserver-policy → rule-matched domains
 # nameserver → unmatched domains
-# default-nameserver → fallback， when the above 2 fail
+# default-nameserver → fallback, when the above 2 fail
 # proxy-server-nameserver → only for proxy node hostnames
 
 
 
  
 # 出站策略
-# 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部.
+# 注意锚点必须放在引用的上方,可以集中把锚点全部放yaml的顶部.
 
 pr: &pr {type: select, proxies: [🚀 默认代理, 🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🇯🇵 LLG日本自动, 🇺🇲 LLG美国自动, 🇺🇲 LLG美国节点, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🌐 全部节点, 直连]}
 
@@ -261,13 +261,13 @@ proxy-groups:
 
 
 # 规则匹配
-# 此规则部分没有做防泄露处理，因为弊严重大于利！
+# 此规则部分没有做防泄露处理,因为弊严重大于利！
 rules:
 
-# 此规则针对IPTV直播源Gather-json，订阅地址和收看地址一致
+# 此规则针对IPTV直播源Gather-json,订阅地址和收看地址一致
   - DOMAIN-KEYWORD,iill,🎯 香港固定
 
-# 此规则针对simplex，避免节点自动跳跃引起连接中断
+# 此规则针对simplex,避免节点自动跳跃引起连接中断
 #  - DOMAIN-SUFFIX,simplex.im,🎯 香港固定
 
   - RULE-SET,rejectlist-frankjin,REJECT
