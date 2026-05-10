@@ -28,7 +28,9 @@ proxy-providers:
     header:
       User-Agent:
       - "Mozilla/5.0 (Linux; Android 12; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/75.0.3770.156 Mobile Safari/537.36 aweme_210600 JsSdk/1.0 NetType/4G AppName/aweme app_version/21.6.0 ByteLocale/zh-CN Region/CN BytedanceWebview/d8a21c6 Build/21060001"
-
+  #    - "Clash"
+  #    - "mihomo"
+  #    - "Clash.meta"
 
 
 
@@ -201,8 +203,13 @@ proxy-groups:
 
   - {name: 🚀 默认代理, type: select, proxies: [🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🇯🇵 LLG日本自动, 🇺🇲 LLG美国自动, 🇺🇲 LLG美国节点, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🌐 全部节点, 直连]}  
   - {name: 🎯 香港固定, type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 LLG香港故转]}
-  - {name: 🚇 ClawCloud隧道, type: select, proxies: [cf_tunnel_visa_tw_443, cf_tunnel_visa_hk_2053, cf_tunnel_visa_br_8443, cf_tunnel_visa_ch_443, cf_tunnel_visa_us_2053, cf_tunnel_icook_hk_8443, cf_tunnel_icook_tw_443]}
-  - {name: 🚇 US-CC-隧道, type: select, proxies: [US_tunnel_visa_tw_443, US_tunnel_visa_hk_2053, US_tunnel_visa_br_8443, US_tunnel_visa_ch_443, US_tunnel_visa_us_2053, US_tunnel_icook_hk_8443, US_tunnel_icook_tw_443]}
+#  - {name: 🇭🇰 香港自动, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
+#  - {name: 🚇 ClawCloud隧道, type: select, proxies: [cf_tunnel_visa_tw_443, cf_tunnel_visa_hk_2053, cf_tunnel_visa_br_8443, cf_tunnel_visa_ch_443, cf_tunnel_visa_us_2053, cf_tunnel_icook_hk_8443, cf_tunnel_icook_tw_443]}
+  - { name: 🚇 ClawCloud隧道, type: url-test, proxies: [cf_tunnel_visa_tw_443, cf_tunnel_visa_hk_2053, cf_tunnel_visa_br_8443, cf_tunnel_visa_ch_443, cf_tunnel_visa_us_2053, cf_tunnel_icook_hk_8443, cf_tunnel_icook_tw_443], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 50 }
+
+#  - {name: 🚇 US-CC-隧道, type: select, proxies: [US_tunnel_visa_tw_443, US_tunnel_visa_hk_2053, US_tunnel_visa_br_8443, US_tunnel_visa_ch_443, US_tunnel_visa_us_2053, US_tunnel_icook_hk_8443, US_tunnel_icook_tw_443]}
+  - { name: 🚇 US-CC-隧道, type: url-test, proxies: [US_tunnel_visa_tw_443, US_tunnel_visa_hk_2053, US_tunnel_visa_br_8443, US_tunnel_visa_ch_443, US_tunnel_visa_us_2053, US_tunnel_icook_hk_8443, US_tunnel_icook_tw_443], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 50 }
+
   - {name: 📹 YouTube, <<: *pr}
   - {name: 🍀 Google, <<: *pr}
   - {name: 🤖 AI, <<: *pr}
@@ -217,8 +224,13 @@ proxy-groups:
   - {name: 🍎 Apple, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 🎯 直连, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 📞 tktn, type: select, proxies: [🚀 默认代理, 🇭🇰 香港自动, 🇭🇰 LLG香港自动, ♻️ 美国自动]}
-  - {name: 📻 BBC, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🇬🇧 英国自动, ♻️ 美国自动, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动]}
-  - {name: 🎵 Spotify, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🇭🇰 LLG香港自动,🇭🇰 香港自动]}
+  - {name: 📻 BBC, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🇬🇧 英国自动, ♻️ 美国自动, 🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动]}
+#- {name: 🎵 Spotify, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🇭🇰 LLG香港自动, 🇭🇰 香港自动, ♻️ 日本自动, 🇹🇼 台湾自动]}
+  - {name: 🎵 Spotify, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🇭🇰 LLG香港自动, 🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动]}
+
+  - {name: 📻 API-cqshushu, type: fallback, url: https://api.cqshushu.com, tolerance: 20, interval: 300, proxies: [DIRECT, 🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动]}
+
+
   - {name: 🐟 漏网之鱼, <<: *pr}
 
   - {name: 🇭🇰 香港节点, type: select, use: [FlowerCloud], filter: "(?i)港|hk|hongkong|hong kong"}
@@ -270,15 +282,19 @@ rules:
 # 此规则针对simplex,避免节点自动跳跃引起连接中断
 #  - DOMAIN-SUFFIX,simplex.im,🎯 香港固定
 
+# 此规则针对IPTV-spider的API 服务器连接, api.cqshushu.com
+  - DOMAIN-SUFFIX,api.cqshushu.com,📻 API-cqshushu
+
   - RULE-SET,rejectlist-frankjin,REJECT
   - RULE-SET,directlist-frankjin,直连
   - RULE-SET,spotify-frankjin,🎵 Spotify
   - RULE-SET,tktnlist-frankjin,📞 tktn
   - RULE-SET,bbclist-frankjin,📻 BBC
+  - RULE-SET,twitterlist-frankjin,♻️ 美国自动
   - RULE-SET,adultlist-frankjin,🚀 默认代理
 
-# disable all my own rules, 20250816 
-#  - RULE-SET,proxylite-frankjin,🚀 默认代理
+# enable all my own rules, 20260430 
+  - RULE-SET,proxylite-frankjin,🚀 默认代理
 
   - RULE-SET,private_domain,直连
   - RULE-SET,apple_domain,🍎 Apple
@@ -316,6 +332,7 @@ rule-providers:
   spotify-frankjin: { <<: *class, url: "https://raw.githubusercontent.com/Frankjin001/rules/refs/heads/main/Spotify.list"}
   bbclist-frankjin: { <<: *class, url: "https://raw.githubusercontent.com/Frankjin001/rules/refs/heads/main/BBC-UK.list"}
   adultlist-frankjin: { <<: *class, url: "https://raw.githubusercontent.com/Frankjin001/rules/refs/heads/main/Adult.list"}
+  twitterlist-frankjin: { <<: *class, url: "https://raw.githubusercontent.com/Frankjin001/rules/refs/heads/main/twitter.list"}
 
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
   ai: {  <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-chat-!cn.mrs" }
