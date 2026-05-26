@@ -32,10 +32,10 @@ proxy-providers:
   #    - "mihomo"
   #    - "Clash.meta"
 
-
+# add CF Workers as a proxy provider.
   CF-Workers:
     type: http
-    url: "https://tiger-queen.myworldmyway.top/<Input your UUID Here>/pcl"
+    url: "https://tiger-queen.<Input your domain Here>/<Input your UUID Here>/pcl"
     interval: 86400  # 每天更新一次
     path: ./proxy_provider/cf_workers.yaml
     health-check:
