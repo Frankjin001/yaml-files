@@ -33,29 +33,21 @@ proxy-providers:
   #    - "Clash.meta"
 
 
+  CF-Workers:
+    type: http
+    url: "https://tiger-queen.myworldmyway.top/<Input your UUID Here>/pcl"
+    interval: 86400  # 每天更新一次
+    path: ./proxy_provider/cf_workers.yaml
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
 
 
 # 节点信息
 proxies:
   - {name: 直连, type: direct, udp: true}
 
-# 下面的VLESS节点来自ClawCloud的proxies-7tech POD,创建于20250902,可能会死掉,可以重启POD。重启之后,理论上这里不需要修改任何东西,应该自动连通。
-  - { name: "cf_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, uuid: #Input the Japan UUID here#, udp: true, tls: true, network: ws, sni: clawcloud.<Input your private domain here>, host: clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input Japan UUID here#?ed=2048", headers: { Host: clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port: 2053, uuid: #Input the Japan UUID here#, udp: true, tls: true, network: ws, sni: clawcloud.<Input your private domain here>, host: clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input Japan UUID here#?ed=2048", headers: { Host: clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, uuid: #Input the Japan UUID here#, udp: true, tls: true, network: ws, sni: clawcloud.<Input your private domain here>, host: clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input Japan UUID here#?ed=2048", headers: { Host: clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, uuid: #Input the Japan UUID here#, udp: true, tls: true, network: ws, sni: clawcloud.<Input your private domain here>, host: clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input Japan UUID here#?ed=2048", headers: { Host: clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, uuid: #Input the Japan UUID here#, udp: true, tls: true, network: ws, sni: clawcloud.<Input your private domain here>, host: clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input Japan UUID here#?ed=2048", headers: { Host: clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
-  - { name: "cf_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, uuid: #Input the Japan UUID here#, udp: true, tls: true, network: ws, sni: clawcloud.<Input your private domain here>, host: clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input Japan UUID here#?ed=2048", headers: { Host: clawcloud.<Input your private domain here> } }, client-fingerprint:chrome }
-  - { name:" cf_tunnel_icook_tw_443", type: vless, server: icook.tw, port: 443, uuid: #Input the Japan UUID here#, udp: true, tls: true, network: ws, sni: clawcloud.<Input your private domain here>, host: clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input Japan UUID here#?ed=2048", headers: { Host: clawcloud.<Input your private domain here> } }, client-fingerprint:chrome }
-
-# 下面的VLESS节点来自ClawCloud的US West zone, 创建于20260318
-  - { name: "US_tunnel_visa_tw_443", type: vless, server: www.visa.com.tw, port: 443, uuid: #Input the US UUID here#, udp: true, tls: true, network: ws, sni: us-clawcloud.<Input your private domain here>, host: us-clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input US UUID here#?ed=2048", headers: { Host: us-clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
-  - { name: "US_tunnel_visa_hk_2053", type: vless, server: www.visa.com.hk, port:2053, uuid: #Input the US UUID here# ,udp: true, tls: true, network: ws, sni: us-clawcloud.<Input your private domain here>, host: us-clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input US UUID here#?ed=2048", headers: { Host: us-clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
-  - { name: "US_tunnel_visa_br_8443", type: vless, server: www.visa.com.br, port: 8443, uuid: #Input the US UUID here#, udp: true, tls: true, network: ws, sni: us-clawcloud.<Input your private domain here>, host: us-clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input US UUID here#?ed=2048", headers: { Host: us-clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
-  - { name: "US_tunnel_visa_ch_443", type: vless, server: www.visaeurope.ch, port: 443, uuid: #Input the US UUID here#, udp: true, tls: true, network: ws, sni: us-clawcloud.<Input your private domain here>, host: us-clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input US UUID here#?ed=2048", headers: { Host: us-clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
-  - { name: "US_tunnel_visa_us_2053", type: vless, server: usa.visa.com, port: 2053, uuid: #Input the US UUID here#, udp: true, tls: true, network: ws, sni: us-clawcloud.<Input your private domain here>, host: us-clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input US UUID here#?ed=2048", headers: { Host: us-clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
-  - { name: "US_tunnel_icook_hk_8443", type: vless, server: icook.hk, port: 8443, uuid: #Input the US UUID here#, udp: true, tls; true, network: ws, sni: us-clawcloud.<Input your private domain here>, host: us-clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input US UUID here#?ed=2048", headers: { Host: us-clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
-  - { name: "US_tunnel_icook_tw_443", type: vless, server: icook.tw, port: 443, uuid: #Input the UUID here#, udp: true, tls: true, network: ws, sni: us-clawcloud.<Input your private domain here>, host: us-clawcloud.<Input your private domain here>, ws-opts: { path: "/#Input US UUID here#?ed=2048", headers: { Host: us-clawcloud.<Input your private domain here> } }, client-fingerprint: chrome }
 
 
 # 全局配置 
@@ -163,6 +155,15 @@ dns:
  
   # 配置查询域名使用的 DNS 服务器,主力DNS服务。
   nameserver-policy:
+
+    # 1. 专项域名锁定（最优先匹配，去除域名两边的单引号）
+    www.xn--sss604efuw.com: 'https://1.1.1.1/dns-query'
+    '*.xn--sss604efuw.com': 'https://1.1.1.1/dns-query'
+    xn--sss604efuw.com: 'https://1.1.1.1/dns-query' # 补一个不带 www 的根域名
+    饭太硬.com: 'https://1.1.1.1/dns-query'
+    '*.饭太硬.com': 'https://1.1.1.1/dns-query'
+    
+    # 2. 规则集分流（后匹配）
     "rule-set:cn_domain":
       -         # 你的 ISP DNS
       - 
@@ -192,24 +193,14 @@ dns:
 
  
 # 出站策略
-# 注意锚点必须放在引用的上方,可以集中把锚点全部放yaml的顶部.
+# 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部.
 
-pr: &pr {type: select, proxies: [🚀 默认代理, 🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🇯🇵 LLG日本自动, 🇺🇲 LLG美国自动, 🇺🇲 LLG美国节点, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🌐 全部节点, 直连]}
-
-# llg-pr: &llg-pr {type: select, proxies: [🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🚀 默认代理, 直连]}
-# llg-pr: &llg-pr {type: select, proxies: [🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动]}
+pr: &pr {type: select, proxies: [🚀 默认代理, 🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🇯🇵 LLG日本自动, 🇺🇲 LLG美国自动, 🇺🇲 LLG美国节点, 📺 CF-nodes, 🌐 全部节点, 直连]}
 
 proxy-groups:
 
-  - {name: 🚀 默认代理, type: select, proxies: [🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🇯🇵 LLG日本自动, 🇺🇲 LLG美国自动, 🇺🇲 LLG美国节点, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🌐 全部节点, 直连]}  
-  - {name: 🎯 香港固定, type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 LLG香港故转]}
-#  - {name: 🇭🇰 香港自动, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
-#  - {name: 🚇 ClawCloud隧道, type: select, proxies: [cf_tunnel_visa_tw_443, cf_tunnel_visa_hk_2053, cf_tunnel_visa_br_8443, cf_tunnel_visa_ch_443, cf_tunnel_visa_us_2053, cf_tunnel_icook_hk_8443, cf_tunnel_icook_tw_443]}
-  - { name: 🚇 ClawCloud隧道, type: url-test, proxies: [cf_tunnel_visa_tw_443, cf_tunnel_visa_hk_2053, cf_tunnel_visa_br_8443, cf_tunnel_visa_ch_443, cf_tunnel_visa_us_2053, cf_tunnel_icook_hk_8443, cf_tunnel_icook_tw_443], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 50 }
-
-#  - {name: 🚇 US-CC-隧道, type: select, proxies: [US_tunnel_visa_tw_443, US_tunnel_visa_hk_2053, US_tunnel_visa_br_8443, US_tunnel_visa_ch_443, US_tunnel_visa_us_2053, US_tunnel_icook_hk_8443, US_tunnel_icook_tw_443]}
-  - { name: 🚇 US-CC-隧道, type: url-test, proxies: [US_tunnel_visa_tw_443, US_tunnel_visa_hk_2053, US_tunnel_visa_br_8443, US_tunnel_visa_ch_443, US_tunnel_visa_us_2053, US_tunnel_icook_hk_8443, US_tunnel_icook_tw_443], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 50 }
-
+  - {name: 🚀 默认代理, type: select, proxies: [🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 🇸🇬 LLG狮城自动, 🇯🇵 LLG日本自动, 🇺🇲 LLG美国自动, 🇺🇲 LLG美国节点, 📺 CF-nodes, 🌐 全部节点, 直连]}  
+  - {name: 📺 CF-nodes, type: url-test, use: [CF-Workers], tolerance: 20, interval: 300}
   - {name: 📹 YouTube, <<: *pr}
   - {name: 🍀 Google, <<: *pr}
   - {name: 🤖 AI, <<: *pr}
@@ -224,13 +215,9 @@ proxy-groups:
   - {name: 🍎 Apple, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 🎯 直连, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: 📞 tktn, type: select, proxies: [🚀 默认代理, 🇭🇰 香港自动, 🇭🇰 LLG香港自动, ♻️ 美国自动]}
-  - {name: 📻 BBC, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🇬🇧 英国自动, ♻️ 美国自动, 🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动]}
-#- {name: 🎵 Spotify, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🇭🇰 LLG香港自动, 🇭🇰 香港自动, ♻️ 日本自动, 🇹🇼 台湾自动]}
-  - {name: 🎵 Spotify, type: select, proxies: [🚀 默认代理, 🚇 ClawCloud隧道, 🚇 US-CC-隧道, 🇭🇰 LLG香港自动, 🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动]}
-
+  - {name: 📻 BBC, type: select, proxies: [🚀 默认代理, 🇬🇧 英国自动, 🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, 🇭🇰 LLG香港自动, 🇹🇼 LLG台湾自动, 📺 CF-nodes]}
+  - {name: 🎵 Spotify, type: select, proxies: [🚀 默认代理, 🇭🇰 LLG香港自动, 🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动, ♻️ 美国自动]}
   - {name: 📻 API-cqshushu, type: fallback, url: https://api.cqshushu.com, tolerance: 20, interval: 300, proxies: [DIRECT, 🇭🇰 香港自动, 🇸🇬 狮城自动, ♻️ 日本自动, 🇹🇼 台湾自动]}
-
-
   - {name: 🐟 漏网之鱼, <<: *pr}
 
   - {name: 🇭🇰 香港节点, type: select, use: [FlowerCloud], filter: "(?i)港|hk|hongkong|hong kong"}
@@ -251,7 +238,6 @@ proxy-groups:
   - {name: 🇸🇬 狮城自动, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(坡|狮|SG|(?i)Singapore))^((?!(港|日|韩|台|深|美)).)*$"} 
   - {name: ♻️ 日本自动, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
   - {name: ♻️ 美国自动, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
-#  - {name: 🇬🇧 英国自动, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?=.*(英|UK|(?i)unitedkingdom|united kingdom))^((?!(港|台|日|韩|新|美)).)*$"}
   - {name: 🇬🇧 英国自动, type: url-test, use: [FlowerCloud], tolerance: 20, interval: 300, filter: "(?i)^(?!.*(港|台|日|韩|新|美)).*(英|UK|united ?kingdom)"}
 
 
@@ -276,16 +262,16 @@ proxy-groups:
 # 此规则部分没有做防泄露处理,因为弊严重大于利！
 rules:
 
-# 此规则针对IPTV直播源Gather-json,订阅地址和收看地址一致
-  - DOMAIN-KEYWORD,iill,🎯 香港固定
-
-# 此规则针对simplex,避免节点自动跳跃引起连接中断
-#  - DOMAIN-SUFFIX,simplex.im,🎯 香港固定
-
 # 此规则针对IPTV-spider的API 服务器连接, api.cqshushu.com
   - DOMAIN-SUFFIX,api.cqshushu.com,📻 API-cqshushu
 
   - RULE-SET,rejectlist-frankjin,REJECT
+
+# Force your custom upstream DNS server to go through the proxy
+  - IP-CIDR,1.1.1.1/32,🚀 默认代理
+  - IP-CIDR,8.8.8.8/32,🚀 默认代理
+
+
   - RULE-SET,directlist-frankjin,直连
   - RULE-SET,spotify-frankjin,🎵 Spotify
   - RULE-SET,tktnlist-frankjin,📞 tktn
